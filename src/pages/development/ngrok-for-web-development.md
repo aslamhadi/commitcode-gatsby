@@ -21,6 +21,6 @@ How to use Ngrok
 
 If you got that right, you can see something like this in the terminal:
 
-<img src="/images/ngrok.png" class="pure-img-responsive" />
+![ngrock](../images/ngrock.png)
 
 Happy Ngrok-ing! :)

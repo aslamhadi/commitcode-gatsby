@@ -14,7 +14,7 @@ My project keeps growing everytime, we started using only one project in the sol
 
 By the time I wrote this, I separated the one project into six projects in one solution. And Sentry becomes a great pillar supporting this refactoring :)
 
-<img src="/images/net-screenshot.png" class="pure-img-responsive" />
+![option](../images/net-screenshot.png)
 
 ### Setting up Sentry
 
@@ -76,6 +76,6 @@ namespace CMSProject.Controllers.Api
 
 This is one of the issues look like in Sentry dashboard. You will have information about the user's browser, os, device, browser, etc.
 
-<img src="/images/exc1.png" class="pure-img-responsive" />
+![exc1](../images/exc1.png)
 
 Another awesome feature from Sentry is you can retest the issue after you fix it. So each issue has `curl` information in it. You can then just copy and paste that curl to your Terminal to retest the code. After that you can set the issue to resolved.

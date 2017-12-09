@@ -37,7 +37,7 @@ def confirmation = Action.async(parse.json) { request =>
 
 This code works well (at the first time), so it got promoted to staging environment. And then something happened. They say sometimes they get intermittent bug when adding a new book.
 
-<img src="/images/noo.png" class="pure-img-responsive">
+![noo](../images/noo.png)
 
 After we got that information, we get back to analyzing the code. If we look at the process both at frontend and backend side, there are 3 expensive processes:
 

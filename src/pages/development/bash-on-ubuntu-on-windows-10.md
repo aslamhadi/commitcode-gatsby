@@ -8,11 +8,11 @@ So I just updated my windows with Windows Anniversary Update and enable ubuntu b
 
 Aaand, I got ubuntu 14.04 on my Windows 10!
 
-<img src="/images/ubuntu-bash.png" class="pure-img-responsive">
+![option](../images/ubuntu-bash.png)
 
 Then I started my adventure 
 
-<img class="pure-img-responsive" src="http://i.giphy.com/HVr4gFHYIqeti.gif" />
+![option](http://i.giphy.com/HVr4gFHYIqeti.gif)
 
 I set up python environment (pip, virtualenv, etc) and cloned my blog repo (which is using Pelican). While doing that, I faced a problem where it doesn't recognize its hostname:
 

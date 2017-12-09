@@ -18,4 +18,4 @@ So start from now, let's try to communicate effectively, whether to your client,
 
 For the ending of the article, let's quote a tweet from Bryan Liles :)
 
-<img class="pure-img-responsive" src="/images/bryan_liles.png" width="400">
+![bryan liles](../images/bryan_liles.png)
