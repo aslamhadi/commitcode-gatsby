@@ -1,30 +1,65 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import get from 'lodash/get'
+import Helmet from 'react-helmet'
 
-const IndexPage = () => (
-  <div>
-    <h1>Richard Hamming on Luck</h1>
-    <div>
-      <p>
-        From Richard Hamming’s classic and must-read talk, “<a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html">
-          You and Your Research
-        </a>”.
-      </p>
-      <blockquote>
-        <p>
-          There is indeed an element of luck, and no, there isn’t. The prepared
-          mind sooner or later finds something important and does it. So yes, it
-          is luck.{" "}
-          <em>
-            The particular thing you do is luck, but that you do something is
-            not.
-          </em>
-        </p>
-      </blockquote>
-    </div>
-    <p>Posted April 09, 2011</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+import Bio from '../components/Bio'
+import { rhythm } from '../utils/typography'
 
-export default IndexPage
+class BlogIndex extends React.Component {
+  render() {
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+
+    return (
+      <div>
+        <Helmet title={siteTitle} />
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = get(node, 'frontmatter.title') || node.fields.slug
+          return (
+            <div key={node.fields.slug}>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>{node.frontmatter.date}</small>
+              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+}
+
+export default BlogIndex
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "DD MMMM, YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`
