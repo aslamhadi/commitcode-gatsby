@@ -5,7 +5,7 @@ module.exports = {
     description: 'Blog to contain my writing, or random stuff.',
     siteUrl: 'https://www.commitcode.com/',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  // pathPrefix: '/gatsby-starter-blog',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
