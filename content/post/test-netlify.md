@@ -6,4 +6,4 @@ tags:
   - APIs
   - JavaScript
 ---
-hello world from netlify cms
+hello world from netlify cms2
