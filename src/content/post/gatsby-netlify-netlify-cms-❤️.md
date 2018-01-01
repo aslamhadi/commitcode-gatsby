@@ -7,7 +7,7 @@ tags:
   - netlifycms
   - gatsby
 ---
-So I just migrated my blog from Pelican to Gatsby. What's the reason for this migration? ~~Because all the cool kids are using it.~~ Because I can also learn React and Redux while implementing this.
+So I just migrated my blog from Pelican to Gatsby. What's the reason for this migration? ~~Because all the cool kids are using it.~~ Because I can also learn React and Redux while implementing this. 
 
 The migration process is not that tedious also. I just had to change the post header (because the format is different between Pelican & Gatsby), edit the template, and install the Netlify CMS.
 
