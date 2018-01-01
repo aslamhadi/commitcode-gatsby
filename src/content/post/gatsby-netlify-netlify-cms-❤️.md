@@ -1,5 +1,5 @@
 ---
-title: Gatsby + Netlify + Netlify CMS = ❤️
+title: Gatsby + Netlify + Netlify CMS = Awesome!
 date: 2018-01-01T12:58:14.655Z
 slug: 'netlify, netlifycms, gatsby'
 tags:
