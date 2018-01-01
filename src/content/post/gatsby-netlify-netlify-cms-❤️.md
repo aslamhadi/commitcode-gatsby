@@ -1,7 +1,7 @@
 ---
 title: Gatsby + Netlify + Netlify CMS = Awesome!
 date: 2018-01-01T12:58:14.655Z
-slug: 'netlify, netlifycms, gatsby'
+slug: gatsby-netlify-netlify-cms-awesome
 tags:
   - netlify
   - netlifycms
