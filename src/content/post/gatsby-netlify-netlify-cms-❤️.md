@@ -15,4 +15,4 @@ Was it worth it? Yesss I believe so. Especially because Netlify part. Previously
 
 The editor:
 
-![netlify-cms](/static/images/Screen Shot 2018-01-01 at 8.10.47 PM.png)
+![netlify-cms](../images/netlify-editor.png)
