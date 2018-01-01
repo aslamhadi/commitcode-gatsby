@@ -46,13 +46,25 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
-
+  let slug;
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
+    const fileNode = getNode(node.parent);
+    const parsedFilePath = path.parse(fileNode.relativePath);
+
+    if (
+      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
+    ) {
+      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+    } else if (parsedFilePath.name !== `index` && parsedFilePath.dir !== ``) {
+      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
+    } else if (parsedFilePath.dir === ``) {
+      slug = `/${parsedFilePath.name}/`;
+    } else {
+      slug = `/${parsedFilePath.dir}/`;
+    }
+
+    // Add slug as a field on the node.
+    createNodeField({ node, name: `slug`, value: slug });
   }
 }
